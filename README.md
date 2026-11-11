@@ -7,10 +7,15 @@
 ## Equipe
 
 Matheus - RM 555177
-Gustavo A. - RM 559098
+
+Gustavo Atanazio. - RM 559098
+
 Nicolas - RM 556617
-Gustavo C. -  RM 556289
+
+Gustavo Coelho -  RM 556289
+
 Igor Soos - RM 556010
+
 
 ## 1. Problema e objetivo
 

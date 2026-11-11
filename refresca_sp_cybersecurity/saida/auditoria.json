@@ -1,0 +1,260 @@
+{
+  "projeto": "Refresca SP — Auditoria de Cybersecurity",
+  "versao": "2.0",
+  "gerado_em_utc": "2026-11-11 00:39",
+  "linhas_analisadas": 14,
+  "ocorrencias": [
+    {
+      "linha": 3,
+      "tipo": "CPF",
+      "nivel": "ALTO",
+      "evidencia": "***.***.***-35",
+      "motivo": "Documento de identificação encontrado em log de aplicação.",
+      "recomendacao": "Evitar registrar CPF; se necessário, usar um identificador interno ou mascaramento."
+    },
+    {
+      "linha": 3,
+      "tipo": "Telefone",
+      "nivel": "MÉDIO",
+      "evidencia": "(**) *****-7777",
+      "motivo": "Contato do cidadão encontrado em log de aplicação.",
+      "recomendacao": "Usar ID interno para eventos de SMS ou ocultar o número antes do log."
+    },
+    {
+      "linha": 4,
+      "tipo": "CPF",
+      "nivel": "ALTO",
+      "evidencia": "***.***.***-09",
+      "motivo": "Documento de identificação encontrado em log de aplicação.",
+      "recomendacao": "Evitar registrar CPF; se necessário, usar um identificador interno ou mascaramento."
+    },
+    {
+      "linha": 4,
+      "tipo": "Telefone",
+      "nivel": "MÉDIO",
+      "evidencia": "(**) *****-4321",
+      "motivo": "Contato do cidadão encontrado em log de aplicação.",
+      "recomendacao": "Usar ID interno para eventos de SMS ou ocultar o número antes do log."
+    },
+    {
+      "linha": 5,
+      "tipo": "Telefone",
+      "nivel": "MÉDIO",
+      "evidencia": "(**) *****-6666",
+      "motivo": "Contato do cidadão encontrado em log de aplicação.",
+      "recomendacao": "Usar ID interno para eventos de SMS ou ocultar o número antes do log."
+    },
+    {
+      "linha": 7,
+      "tipo": "CPF",
+      "nivel": "ALTO",
+      "evidencia": "***.***.***-00",
+      "motivo": "Documento de identificação encontrado em log de aplicação.",
+      "recomendacao": "Evitar registrar CPF; se necessário, usar um identificador interno ou mascaramento."
+    },
+    {
+      "linha": 7,
+      "tipo": "Telefone",
+      "nivel": "MÉDIO",
+      "evidencia": "(**) *****-7890",
+      "motivo": "Contato do cidadão encontrado em log de aplicação.",
+      "recomendacao": "Usar ID interno para eventos de SMS ou ocultar o número antes do log."
+    },
+    {
+      "linha": 9,
+      "tipo": "Saúde",
+      "nivel": "ALTO",
+      "evidencia": "[DADO DE SAÚDE OCULTO]",
+      "motivo": "Campo de saúde detectado com conteúdo legível em log.",
+      "recomendacao": "Remover informações de saúde dos logs e restringir acesso aos sistemas que as tratam."
+    },
+    {
+      "linha": 10,
+      "tipo": "Saúde",
+      "nivel": "ALTO",
+      "evidencia": "[DADO DE SAÚDE OCULTO]",
+      "motivo": "Campo de saúde detectado com conteúdo legível em log.",
+      "recomendacao": "Remover informações de saúde dos logs e restringir acesso aos sistemas que as tratam."
+    },
+    {
+      "linha": 11,
+      "tipo": "Senha",
+      "nivel": "CRÍTICO",
+      "evidencia": "[SEGREDO OCULTO]",
+      "motivo": "Campo de senha ou segredo detectado com conteúdo legível em log.",
+      "recomendacao": "Nunca registrar senhas ou segredos; bloquear o evento antes da gravação."
+    },
+    {
+      "linha": 12,
+      "tipo": "Senha",
+      "nivel": "CRÍTICO",
+      "evidencia": "[SEGREDO OCULTO]",
+      "motivo": "Campo de senha ou segredo detectado com conteúdo legível em log.",
+      "recomendacao": "Nunca registrar senhas ou segredos; bloquear o evento antes da gravação."
+    }
+  ],
+  "fluxos": [
+    {
+      "funcao": "cadastrar_usuario_inseguro",
+      "tipo": "CPF",
+      "origem": "payload['cpf']",
+      "destino": "logger.info() (L31)",
+      "linha": 31,
+      "status": "VULNERÁVEL",
+      "nivel": "ALTO",
+      "rastro": [
+        "Entrada: payload['cpf'] (L26)",
+        "Variável: cpf (L26)",
+        "Variável: mensagem (L30)",
+        "Destino: logger.info() (L31)"
+      ]
+    },
+    {
+      "funcao": "cadastrar_usuario_inseguro",
+      "tipo": "Telefone",
+      "origem": "payload['telefone']",
+      "destino": "logger.info() (L31)",
+      "linha": 31,
+      "status": "VULNERÁVEL",
+      "nivel": "MÉDIO",
+      "rastro": [
+        "Entrada: payload['telefone'] (L27)",
+        "Variável: telefone (L27)",
+        "Variável: mensagem (L30)",
+        "Destino: logger.info() (L31)"
+      ]
+    },
+    {
+      "funcao": "cadastrar_usuario_inseguro",
+      "tipo": "Senha",
+      "origem": "payload['senha']",
+      "destino": "logger.info() (L31)",
+      "linha": 31,
+      "status": "VULNERÁVEL",
+      "nivel": "CRÍTICO",
+      "rastro": [
+        "Entrada: payload['senha'] (L28)",
+        "Variável: senha (L28)",
+        "Variável: mensagem (L30)",
+        "Destino: logger.info() (L31)"
+      ]
+    },
+    {
+      "funcao": "cadastrar_usuario_inseguro",
+      "tipo": "Saúde",
+      "origem": "payload['saude']",
+      "destino": "logger.info() (L31)",
+      "linha": 31,
+      "status": "VULNERÁVEL",
+      "nivel": "ALTO",
+      "rastro": [
+        "Entrada: payload['saude'] (L29)",
+        "Variável: saude (L29)",
+        "Variável: mensagem (L30)",
+        "Destino: logger.info() (L31)"
+      ]
+    },
+    {
+      "funcao": "cadastrar_usuario_seguro",
+      "tipo": "CPF",
+      "origem": "payload['cpf']",
+      "destino": "logger.info() (L39)",
+      "linha": 39,
+      "status": "PROTEGIDO",
+      "nivel": "BAIXO",
+      "rastro": [
+        "Entrada: payload['cpf'] (L35)",
+        "Variável: cpf (L35)",
+        "Proteção: mascarar_cpf() (L40)",
+        "Destino: logger.info() (L39)"
+      ]
+    },
+    {
+      "funcao": "cadastrar_usuario_seguro",
+      "tipo": "Telefone",
+      "origem": "payload['telefone']",
+      "destino": "logger.info() (L39)",
+      "linha": 39,
+      "status": "PROTEGIDO",
+      "nivel": "BAIXO",
+      "rastro": [
+        "Entrada: payload['telefone'] (L36)",
+        "Variável: telefone (L36)",
+        "Proteção: mascarar_telefone() (L40)",
+        "Destino: logger.info() (L39)"
+      ]
+    },
+    {
+      "funcao": "cadastrar_usuario_seguro",
+      "tipo": "Senha",
+      "origem": "payload['senha']",
+      "destino": "logger.info() (L39)",
+      "linha": 39,
+      "status": "PROTEGIDO",
+      "nivel": "BAIXO",
+      "rastro": [
+        "Entrada: payload['senha'] (L37)",
+        "Variável: senha (L37)",
+        "Proteção: ocultar_senha() (L41)",
+        "Destino: logger.info() (L39)"
+      ]
+    },
+    {
+      "funcao": "cadastrar_usuario_seguro",
+      "tipo": "Saúde",
+      "origem": "payload['saude']",
+      "destino": "logger.info() (L39)",
+      "linha": 39,
+      "status": "PROTEGIDO",
+      "nivel": "BAIXO",
+      "rastro": [
+        "Entrada: payload['saude'] (L38)",
+        "Variável: saude (L38)",
+        "Proteção: ocultar_saude() (L41)",
+        "Destino: logger.info() (L39)"
+      ]
+    }
+  ],
+  "risco_geral": "CRÍTICO",
+  "indice_cidadao": 91,
+  "bloqueio": {
+    "tentativas": 6,
+    "bloqueados": 4,
+    "permitidos": 2,
+    "tipos_bloqueados": {
+      "CPF": 1,
+      "Telefone": 1,
+      "Senha": 1,
+      "Saúde": 1
+    },
+    "linhas_escritas_no_handler": 2,
+    "nenhuma_exposicao_no_handler": true
+  },
+  "explicacao_simples": "Foram encontrados indícios de exposição de dados pessoais e de credenciais em registros simulados. Se uma senha aparecer em logs reais, ela pode permitir acesso indevido às contas. A prioridade é interromper o registro de segredos, restringir acesso aos logs e revisar credenciais afetadas.",
+  "remediacoes": [
+    {
+      "tipo": "Senha",
+      "titulo": "Segredos em registros técnicos",
+      "linguagem_cidadao": "Uma senha registrada pode dar a terceiros acesso à conta do cidadão.",
+      "acao_tecnica": "Bloquear o log contendo credenciais, remover o dado do evento e avaliar rotação de senhas expostas."
+    },
+    {
+      "tipo": "Saúde",
+      "titulo": "Privacidade de dados de saúde",
+      "linguagem_cidadao": "Informações de saúde são privadas e não devem constar em mensagens de diagnóstico.",
+      "acao_tecnica": "Não registrar diagnósticos, sintomas ou medicação; usar códigos técnicos e limitar acessos."
+    },
+    {
+      "tipo": "CPF",
+      "titulo": "Exposição de documento",
+      "linguagem_cidadao": "O documento de identificação pode ser visto por quem tenha acesso aos registros.",
+      "acao_tecnica": "Eliminar o CPF do log; se estritamente necessário, substituí-lo por identificador opaco."
+    },
+    {
+      "tipo": "Telefone",
+      "titulo": "Exposição do contato",
+      "linguagem_cidadao": "O número de contato do cidadão pode ficar visível nos registros.",
+      "acao_tecnica": "Registrar apenas o identificador da tentativa de SMS ou uma versão mascarada do telefone."
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+REFRESCA SP | DEMONSTRAÇÃO DE BLOQUEIO
+Tentativas: 6
+Bloqueadas: 4
+Permitidas: 2
+Linhas realmente gravadas: 2
+Dados sensíveis gravados: NÃO
+Observação: proteção demonstrativa aplicada somente a um handler isolado.

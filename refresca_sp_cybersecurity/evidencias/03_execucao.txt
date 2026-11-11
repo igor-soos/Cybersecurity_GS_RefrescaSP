@@ -1,0 +1,30 @@
+============================================================
+REFRESCA SP | AUDITORIA DE CYBERSECURITY — V2
+============================================================
+Linhas de log .............. 14
+Exposições detectadas ...... 11
+CPF                       3
+Telefone                  4
+Saúde                     2
+Senha                     2
+Fluxos vulneráveis ......... 4
+Fluxos protegidos .......... 4
+Filtro: bloqueados ......... 4/6
+Risco Cidadão .............. 91/100 (didático)
+Classificação geral ........ CRÍTICO
+------------------------------------------------------------
+L03 | CPF      | ***.***.***-35
+L03 | Telefone | (**) *****-7777
+L04 | CPF      | ***.***.***-09
+L04 | Telefone | (**) *****-4321
+L05 | Telefone | (**) *****-6666
+L07 | CPF      | ***.***.***-00
+L07 | Telefone | (**) *****-7890
+L09 | Saúde    | [DADO DE SAÚDE OCULTO]
+L10 | Saúde    | [DADO DE SAÚDE OCULTO]
+L11 | Senha    | [SEGREDO OCULTO]
+L12 | Senha    | [SEGREDO OCULTO]
+------------------------------------------------------------
+Dashboard: /mnt/data/cyber_v2_work/refresca_sp_cybersecurity/saida/dashboard.html
+Relatório: /mnt/data/cyber_v2_work/refresca_sp_cybersecurity/saida/relatorio_auditoria.md
+Todos os dados de entrada da demonstração são fictícios.

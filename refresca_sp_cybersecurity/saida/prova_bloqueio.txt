@@ -1,0 +1,6 @@
+DEMONSTRAÇÃO DE FILTRO PREVENTIVO | REFRESCA SP
+Tentativas: 6
+Bloqueadas: 4
+Permitidas: 2
+Tipos bloqueados: CPF=1, Telefone=1, Senha=1, Saúde=1
+Nenhuma mensagem recusada foi gravada no handler demonstrativo.

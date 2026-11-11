@@ -1,0 +1,33 @@
+test_dashboard_inclui_secao_remediacao_e_bloqueio (teste_auditoria.TesteArtefatos.test_dashboard_inclui_secao_remediacao_e_bloqueio) ... ok
+test_relatorio_dashboard_json_sem_dados_em_claro (teste_auditoria.TesteArtefatos.test_relatorio_dashboard_json_sem_dados_em_claro) ... ok
+test_bloqueia_saude (teste_auditoria.TesteBloqueio.test_bloqueia_saude) ... ok
+test_demonstra_quatro_bloqueios (teste_auditoria.TesteBloqueio.test_demonstra_quatro_bloqueios) ... ok
+test_filtro_nao_escreve_senha (teste_auditoria.TesteBloqueio.test_filtro_nao_escreve_senha) ... ok
+test_contagem_arquivo_de_exemplo (teste_auditoria.TesteRegex.test_contagem_arquivo_de_exemplo) ... ok
+test_cpf_dentro_de_senha_nao_cria_duplicata (teste_auditoria.TesteRegex.test_cpf_dentro_de_senha_nao_cria_duplicata) ... ok
+test_cpf_formatado_e_valido (teste_auditoria.TesteRegex.test_cpf_formatado_e_valido) ... ok
+test_cpf_invalido_sem_contexto (teste_auditoria.TesteRegex.test_cpf_invalido_sem_contexto) ... ok
+test_cpf_sem_pontuacao (teste_auditoria.TesteRegex.test_cpf_sem_pontuacao) ... ok
+test_detecta_condicao_saude_sem_aspas (teste_auditoria.TesteRegex.test_detecta_condicao_saude_sem_aspas) ... ok
+test_detecta_diagnostico_com_aspas (teste_auditoria.TesteRegex.test_detecta_diagnostico_com_aspas) ... ok
+test_detecta_saude_com_formato_json (teste_auditoria.TesteRegex.test_detecta_saude_com_formato_json) ... ok
+test_detecta_senha_e_password (teste_auditoria.TesteRegex.test_detecta_senha_e_password) ... ok
+test_nao_confunde_cep_temperatura_e_id (teste_auditoria.TesteRegex.test_nao_confunde_cep_temperatura_e_id) ... ok
+test_nao_detecta_palavras_soltas (teste_auditoria.TesteRegex.test_nao_detecta_palavras_soltas) ... ok
+test_nao_reexpor_textos_privados (teste_auditoria.TesteRegex.test_nao_reexpor_textos_privados) ... ok
+test_nao_sinaliza_campos_mascarados (teste_auditoria.TesteRegex.test_nao_sinaliza_campos_mascarados) ... ok
+test_telefone_com_55 (teste_auditoria.TesteRegex.test_telefone_com_55) ... ok
+test_telefone_ddd (teste_auditoria.TesteRegex.test_telefone_ddd) ... ok
+test_telefone_sem_mascara (teste_auditoria.TesteRegex.test_telefone_sem_mascara) ... ok
+test_valores_mascarados (teste_auditoria.TesteRegex.test_valores_mascarados) ... ok
+test_identifica_quatro_inseguros_quatro_protegidos (teste_auditoria.TesteTaint.test_identifica_quatro_inseguros_quatro_protegidos) ... ok
+test_logger_com_argumentos_de_formatacao (teste_auditoria.TesteTaint.test_logger_com_argumentos_de_formatacao) ... ok
+test_rastros_fonte_destino (teste_auditoria.TesteTaint.test_rastros_fonte_destino) ... ok
+test_risco_critico_e_indice (teste_auditoria.TesteTaint.test_risco_critico_e_indice) ... ok
+test_sanitizador_de_cpf_nao_protege_senha (teste_auditoria.TesteTaint.test_sanitizador_de_cpf_nao_protege_senha) ... ok
+test_sem_risco (teste_auditoria.TesteTaint.test_sem_risco) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 0.009s
+
+OK

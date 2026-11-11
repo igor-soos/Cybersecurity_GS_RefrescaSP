@@ -1,0 +1,14 @@
+2026-11-05T14:30:00Z INFO IoT sensorId=ESP32-CENTRO-01 temperature=36.5 cep=01310-100
+2026-11-05T14:31:00Z INFO SOA alertId=ALT-9982 riskLevel=HIGH active=true
+2026-11-05T14:32:00Z WARNING cadastro_id=CAD-101 cpf=111.444.777-35 telefone=(11) 98888-7777 canal=SMS
+2026-11-05T14:32:10Z DEBUG cadastro_id=CAD-102 cpf=12345678909 celular=11987654321
+2026-11-05T14:33:00Z INFO sms_enviado telefone=+55 11 97777-6666 status=OK
+2026-11-05T14:34:00Z INFO refugio_id=REF-105 nome=Bebedouro Parque Trianon distancia=200m
+2026-11-05T14:35:00Z ERROR cadastro_id=CAD-103 cpf=987.654.321-00 telefone=(11) 3456-7890 tentativa=2
+2026-11-05T14:36:00Z INFO log_seguro cpf=***.***.***-35 telefone=(**) *****-7777 mensagem=Mascarado
+2026-11-05T14:37:00Z WARNING cadastro_id=CAD-104 diagnostico="hipertensao" status=RECEBIDO
+2026-11-05T14:38:00Z DEBUG cadastro_id=CAD-105 condicao_saude=diabetes status=RECEBIDO
+2026-11-05T14:39:00Z ERROR cadastro_id=CAD-106 senha="senha_ficticia_123" tentativa=1
+2026-11-05T14:40:00Z DEBUG cadastro_id=CAD-107 password=ChaveTesteABC status=RECEBIDO
+2026-11-05T14:41:00Z INFO cadastro_id=CAD-108 saude=[OCULTO] senha=[OCULTO] status=RECEBIDO
+2026-11-05T14:42:00Z INFO monitoramento riskLevel=HIGH temperatura=36.5 status=OK

@@ -141,10 +141,8 @@ O valor **CRÍTICO** descreve as falhas **inseridas propositalmente na amostra**
 
 ## 11. Limitações e recomendações
 
-- Trata-se de uma **prova de conceito acadêmica**, com dados totalmente artificiais.
+- Todos os dados pessoais usados são totalmente artificiais.
 - Regex reconhece alguns formatos/chaves; há possibilidade de falsos positivos e negativos.
-- O rastreador AST avalia somente um subconjunto de construções Python e **não confirma a eficácia real da implementação de todo sanitizador**.
+- O rastreador AST avalia somente um subconjunto de construções Python e pode não confirmar a eficácia real da implementação de todo sanitizador.
 - O bloqueio protege **somente o handler onde o filtro foi instalado**.
 - Nunca use senhas, documentos ou dados médicos de pessoas reais para testar o protótipo.
-- Em um ambiente real, recomenda-se minimizar coleta/retensão de PII, revisar acessos, estabelecer política de logs e aplicar proteção em todos os destinos.
-- Este exercício não comprova conformidade com a LGPD nem substitui auditoria profissional.

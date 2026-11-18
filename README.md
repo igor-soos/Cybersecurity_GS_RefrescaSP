@@ -118,7 +118,7 @@ O índice soma pesos por ocorrências (**CPF 6, Telefone 3, Saúde 10, Senha 16*
 
 ## 8. IA na remediação
 
-Durante a **elaboração** do projeto, o ChatGPT auxiliou na tradução dos achados técnicos para mensagens simples e sugestões de correção por tipo de vulnerabilidade. O programa utiliza esses textos **já revisados e armazenados localmente**, sem chamada ao ChatGPT/Gemini durante sua execução. Só foram considerados cenários fictícios e categorias de risco, sem dados pessoais reais. Consulte [`documentacao/uso_ia.md`](documentacao/uso_ia.md) para o fluxo reproduzível e exemplos de conteúdo.
+Durante a **elaboração** do projeto, o ChatGPT auxiliou na tradução dos achados técnicos para mensagens simples e sugestões de correção por tipo de vulnerabilidade. O programa utiliza esses textos **já revisados e armazenados localmente**, sem chamada ao ChatGPT/Gemini durante sua execução. Só foram considerados cenários fictícios e categorias de risco, sem dados pessoais reais. Consulte [`documentacao/uso_ia.md`](refresca_sp_cybersecurity/documentacao/uso_ia.md) para o fluxo reproduzível e exemplos de conteúdo.
 
 ## 9. Resultados da amostra v2
 
